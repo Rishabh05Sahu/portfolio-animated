@@ -13,32 +13,32 @@ export default function HeroSection({ scrollYProgress }: { scrollYProgress: Moti
   const y = useTransform(scrollYProgress, [0, 0.2], [0, 100]);
 
   return (
-    <motion.section 
+    <motion.section
       ref={containerRef}
-      className="relative h-[100vh] flex items-center justify-center overflow-hidden"
+      className="relative min-h-[100svh] flex items-center justify-center overflow-hidden"
       style={{ opacity, scale, y }}
     >
       <Suspense fallback={null}>
         <Scene scrollYProgress={scrollYProgress} />
       </Suspense>
 
-      <div className="relative z-10 container mx-auto px-4 text-center mt-20">
+      <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center mt-12 sm:mt-20">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-6 inline-block"
+          className="mb-5 sm:mb-6 inline-block"
         >
-          <span className="px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium tracking-wide uppercase glowing-border">
+          <span className="px-3 sm:px-4 py-1.5 rounded-full border border-primary/30 bg-primary/10 text-primary text-xs sm:text-sm font-medium tracking-wide uppercase glowing-border">
             Available for new opportunities
           </span>
         </motion.div>
 
-        <motion.h1 
+        <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-6 text-foreground"
+          className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tighter mb-4 sm:mb-6 text-foreground"
         >
           Rishabh Sahu
         </motion.h1>
@@ -47,7 +47,7 @@ export default function HeroSection({ scrollYProgress }: { scrollYProgress: Moti
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-light mb-8 max-w-2xl mx-auto"
+          className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-light mb-6 sm:mb-8 max-w-2xl mx-auto"
         >
           Full Stack Developer
         </motion.h2>
@@ -56,7 +56,7 @@ export default function HeroSection({ scrollYProgress }: { scrollYProgress: Moti
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-lg md:text-xl text-primary/80 mb-12 max-w-xl mx-auto"
+          className="text-base sm:text-lg md:text-xl text-primary/80 mb-8 sm:mb-12 max-w-xl mx-auto px-2"
         >
           Crafting immersive digital experiences
         </motion.p>
@@ -65,20 +65,20 @@ export default function HeroSection({ scrollYProgress }: { scrollYProgress: Moti
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-6"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6"
         >
-          <Button 
-            size="lg" 
-            className="w-full sm:w-auto h-14 px-8 text-base font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 glow-shadow-hover transition-all duration-300"
+          <Button
+            size="lg"
+            className="w-full sm:w-auto h-12 sm:h-14 px-6 sm:px-8 text-base font-medium rounded-full bg-primary text-primary-foreground hover:bg-primary/90 glow-shadow-hover transition-all duration-300"
             onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })}
           >
             View Work <ArrowRight className="ml-2 w-5 h-5" />
           </Button>
-          
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="w-full sm:w-auto h-14 px-8 text-base font-medium rounded-full border-secondary/50 text-foreground hover:bg-secondary/10 hover:border-secondary transition-all duration-300"
+
+          <Button
+            size="lg"
+            variant="outline"
+            className="w-full sm:w-auto h-12 sm:h-14 px-6 sm:px-8 text-base font-medium rounded-full border-secondary/50 text-foreground hover:bg-secondary/10 hover:border-secondary transition-all duration-300"
             onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
           >
             Contact <Mail className="ml-2 w-5 h-5" />
@@ -86,11 +86,11 @@ export default function HeroSection({ scrollYProgress }: { scrollYProgress: Moti
         </motion.div>
       </div>
 
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
-        <motion.div 
-          animate={{ y: [0, 10, 0] }} 
+      <div className="absolute bottom-6 sm:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center">
+        <motion.div
+          animate={{ y: [0, 10, 0] }}
           transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
-          className="w-[1px] h-16 bg-gradient-to-b from-primary to-transparent"
+          className="w-[1px] h-12 sm:h-16 bg-gradient-to-b from-primary to-transparent"
         />
       </div>
     </motion.section>

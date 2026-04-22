@@ -37,34 +37,34 @@ export default function ContactSection() {
       className="min-h-screen py-32 relative z-50 flex items-center"
       style={{ opacity, scale, y }}
     >
-      <div className="container mx-auto px-6 max-w-6xl">
-        <div className="grid lg:grid-cols-2 gap-16">
-          
+      <div className="container mx-auto px-4 sm:px-6 max-w-6xl">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+
           {/* Info Side */}
           <div>
-            <h2 className="text-5xl md:text-7xl font-display font-bold mb-6">Let's Connect</h2>
-            <p className="text-muted-foreground text-lg mb-12 max-w-md">
+            <h2 className="text-4xl sm:text-5xl md:text-7xl font-display font-bold mb-4 sm:mb-6">Let's Connect</h2>
+            <p className="text-muted-foreground text-base sm:text-lg mb-8 sm:mb-12 max-w-md">
               Have a project in mind or want to explore an opportunity? I'm always open to discussing new ideas.
             </p>
 
-            <div className="space-y-8">
-              <a href="mailto:rishabhsahu13873@gmail.com" className="flex items-center group">
-                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300 mr-6">
-                  <Mail className="w-6 h-6" />
+            <div className="space-y-6 sm:space-y-8">
+              <a href="mailto:rishabhsahu13873@gmail.com" className="flex items-center group min-w-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-primary-foreground group-hover:shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all duration-300 mr-4 sm:mr-6">
+                  <Mail className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Email</div>
-                  <div className="text-xl font-medium text-foreground group-hover:text-primary transition-colors">rishabhsahu13873@gmail.com</div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mb-1">Email</div>
+                  <div className="text-base sm:text-lg md:text-xl font-medium text-foreground group-hover:text-primary transition-colors break-all">rishabhsahu13873@gmail.com</div>
                 </div>
               </a>
 
-              <a href="tel:+917000332087" className="flex items-center group">
-                <div className="w-14 h-14 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground group-hover:shadow-[0_0_20px_rgba(157,78,221,0.4)] transition-all duration-300 mr-6">
-                  <Phone className="w-6 h-6" />
+              <a href="tel:+917000332087" className="flex items-center group min-w-0">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-secondary-foreground group-hover:shadow-[0_0_20px_rgba(157,78,221,0.4)] transition-all duration-300 mr-4 sm:mr-6">
+                  <Phone className="w-5 h-5 sm:w-6 sm:h-6" />
                 </div>
-                <div>
-                  <div className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Phone</div>
-                  <div className="text-xl font-medium text-foreground group-hover:text-secondary transition-colors">+91 7000332087</div>
+                <div className="min-w-0 flex-1">
+                  <div className="text-xs sm:text-sm text-muted-foreground uppercase tracking-wider mb-1">Phone</div>
+                  <div className="text-base sm:text-lg md:text-xl font-medium text-foreground group-hover:text-secondary transition-colors">+91 7000332087</div>
                 </div>
               </a>
 
